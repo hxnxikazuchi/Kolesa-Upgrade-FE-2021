@@ -1,3 +1,8 @@
+:root {
+    --blackish: #1c1819;
+    --bluish: #2a81dd;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,7 +29,7 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #1c1819;
+    background: var(--blackish);
 }
 
 .x-y-centering {
@@ -86,7 +91,7 @@ a {
 }
 
 .active-img {
-    border: 1px solid #2a81dd;
+    border: 1px solid var(--bluish);
     border-radius: 8px;
 }
 
@@ -124,7 +129,7 @@ a {
 
 .client-points p {
     font-weight: 600;
-    color: #1c1819;
+    color: var(--blackish);
 }
 
 .money-bag {
@@ -138,7 +143,7 @@ a {
 .points {
     font-size: 20px;
     line-height: 32px;
-    color: #1c1819;
+    color: var(--blackish);
     font-weight: normal;
 }
 
@@ -150,7 +155,7 @@ a {
 .order {
     width: 135px;
     height: 36px;
-    background: #2a81dd;
+    background: var(--bluish);
     transition: all 0.3s;
     cursor: pointer;
     border-radius: 8px;
@@ -184,7 +189,7 @@ a {
 .non-radio-info {
     font-size: 14px;
     line-height: 24px;
-    color: #1c1819;
+    color: var(--blackish);
     font-weight: normal;
     margin-bottom: 8px;
 }
@@ -230,7 +235,7 @@ a {
     /* justify-content: space-evenly; */
     width: 100%;
     height: 100%;
-    color: #2a81dd;
+    color: var(--bluish);
     padding: 8px;
     transition: all 0.3s;
     cursor: pointer;
@@ -249,7 +254,7 @@ a {
 
 .color-container input[type='radio']:checked + label,
 .size-container input[type='radio']:checked + label {
-    color: #1c1819;
+    color: var(--blackish);
     border: unset;
     background: #d6ecfb;
 }
@@ -278,7 +283,7 @@ a {
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
-    color: #1c1819;
+    color: var(--blackish);
 }
 
 .non-radio-info {
