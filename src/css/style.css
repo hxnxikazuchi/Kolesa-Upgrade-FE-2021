@@ -96,8 +96,7 @@ a {
 }
 
 .goods-information {
-    width: 100%;
-    max-width: 573px;
+    min-width: 573px;
 }
 
 .client-points {
