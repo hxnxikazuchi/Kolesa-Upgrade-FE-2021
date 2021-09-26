@@ -54,6 +54,7 @@ a {
     background: #fff;
     padding: 64px 56px;
     border-radius: 16px;
+    gap: 0 24px;
 }
 
 .modal-close {
