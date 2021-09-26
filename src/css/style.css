@@ -153,7 +153,8 @@ a {
 }
 
 .order {
-    width: 135px;
+    width: 100%;
+    max-width: 135px;
     height: 36px;
     background: var(--bluish);
     transition: all 0.3s;
