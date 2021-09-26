@@ -58,8 +58,8 @@ a {
     cursor: pointer;
     position: absolute;
     transition: all 0.3s;
-    right: 3%;
-    top: 3%;
+    right: 30px;
+    top: 30px;
 }
 
 .modal-close:hover {
