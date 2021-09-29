@@ -11,10 +11,23 @@
         <header class="header">
             <div class="container">
                 <div class="inner-header">
-                    <img src="src/assets/img/logo.svg" alt="kolesa-logo" />
+                    <img
+                        class="logo"
+                        src="src/assets/img/logo.svg"
+                        alt="kolesa-logo"
+                    />
                     <div class="search-user">
-                        <input type="text" />
-                        <div class="user-header">
+                        <div class="search-wrapper">
+                            <form action="#">
+                                <button class="search-btn"></button>
+                                <input
+                                    type="text"
+                                    placeholder="Поиск"
+                                    name="search"
+                                />
+                            </form>
+                        </div>
+                        <a href="#" class="user-header">
                             <img
                                 src="src/assets/img/morti.svg"
                                 alt="user-photo"
@@ -23,7 +36,7 @@
                                 <p class="user-name">Мортиджан</p>
                                 <p class="user-point">300 баллов</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

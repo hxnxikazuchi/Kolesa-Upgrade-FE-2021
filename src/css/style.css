@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 :root {
     --blackish: #1c1819;
     --bluish: #2a81dd;
@@ -16,6 +18,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    color: #1c1819;
 }
 
 a {
@@ -25,12 +28,89 @@ a {
 /* header */
 
 .header {
-    padding: 32px 32px 0 32px;
+    width: 100vw;
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.inner-header {
+    display: flex;
+    padding: 32px 32px 0 32px;
+}
+
+.logo {
+    margin-right: 66px;
+}
+
+.search-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-wrapper form {
+    position: relative;
+}
+
+.search-wrapper input[type='text'] {
+    height: 44px;
+    padding: 8px 8px 8px 56px;
+    border: none;
+    color: #888b94;
+    background: #f2f2f3;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: normal;
+    outline: none;
+}
+
+.search-btn {
+    position: absolute;
+    left: 16px;
+    bottom: 10px;
+    background: none;
+    background-image: url('../assets/img/search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-btn:hover {
+    transform: scale(0.9);
+}
+
+.user-header {
+    display: flex;
+    gap: 0 16px;
+    text-decoration: none;
+}
+
+.user-header img {
+    display: block;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 600;
+    line-height: 24px;
+    color: #2a81dd;
+}
+
+.user-point {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #1c1819;
 }
 
 /* Modal */
