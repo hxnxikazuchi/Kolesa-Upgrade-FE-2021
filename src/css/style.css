@@ -3,6 +3,9 @@
 :root {
     --blackish: #1c1819;
     --bluish: #2a81dd;
+    --grey: #888b94;
+    --radio-checked: #d6ecfb;
+    --white: #fff;
 }
 
 * {
@@ -18,8 +21,9 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    color: #1c1819;
+    color: var(--blackish);
     overflow-x: hidden;
+    line-height: 24px;
 }
 
 a {
@@ -62,7 +66,7 @@ a {
     height: 44px;
     padding: 8px 8px 8px 56px;
     border: none;
-    color: #888b94;
+    color: var(--grey);
     background: #f2f2f3;
     border-radius: 8px;
     font-size: 18px;
@@ -131,7 +135,6 @@ a {
 
 .user-name {
     font-weight: 600;
-    line-height: 24px;
     color: var(--bluish);
 }
 
@@ -236,13 +239,12 @@ a {
     border: 1px solid rgba(28, 24, 25, 0.1);
     text-align: center;
     font-weight: 400;
-    line-height: 24px;
     color: var(--bluish);
 }
 
 .radio-item input[type='radio']:checked + label {
     border: none;
-    background: #d6ecfb;
+    background: var(--radio-checked);
     color: var(--blackish);
 }
 
@@ -286,7 +288,7 @@ a {
     bottom: 16px;
     padding: 0 4px;
     background-color: #64bd38;
-    color: #fff;
+    color: var(--white);
     font-size: 13px;
     line-height: 20px;
     border-radius: 3px;
@@ -308,7 +310,6 @@ a {
 .item-name {
     font-size: 16px;
     color: var(--blackish);
-    line-height: 24px;
     margin-bottom: 4px;
     overflow: hidden;
     white-space: nowrap;
@@ -317,15 +318,14 @@ a {
 
 .item-size {
     font-weight: 400;
-    color: #888b94;
-    line-height: 24px;
+    color: var(--grey);
     margin-bottom: 16px;
 }
 
 .item-order {
     opacity: 0;
     background-color: var(--bluish);
-    color: #fff;
+    color: var(--white);
     text-align: center;
     padding: 10px 0;
     width: 100%;
@@ -334,7 +334,6 @@ a {
     cursor: pointer;
     border-radius: 8px;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 400;
     transition: all 0.3s;
 }
@@ -363,7 +362,6 @@ ul {
     position: relative;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
     color: var(--blackish);
 }
 
@@ -422,10 +420,9 @@ ul {
 }
 
 .footer-logo {
-    color: #fff;
+    color: var(--white);
     font-weight: normal;
     font-size: 16px;
-    line-height: 24px;
 }
 
 .social-logo {
@@ -463,8 +460,7 @@ ul {
 
 .footer-contact-us p {
     font-weight: 400;
-    line-height: 24px;
-    color: #fff;
+    color: var(--white);
 }
 
 .write-us {
@@ -472,7 +468,7 @@ ul {
     max-width: 150px;
     max-height: 36px;
     padding: 6px 0;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
     border-radius: 8px;
     transition: all 0.3s;
@@ -487,7 +483,6 @@ ul {
     justify-content: center;
     align-items: center;
     color: var(--bluish);
-    line-height: 24px;
 }
 
 /* Modal */
@@ -522,7 +517,7 @@ ul {
     display: flex;
     justify-content: space-between;
     position: relative;
-    background: #fff;
+    background: var(--white);
     padding: 64px 56px;
     border-radius: 16px;
     gap: 0 24px;
@@ -594,8 +589,7 @@ ul {
 .money h6,
 .money p {
     font-weight: normal;
-    line-height: 24px;
-    color: #888b94;
+    color: var(--grey);
     margin-bottom: 4px;
 }
 
@@ -645,8 +639,7 @@ ul {
     justify-content: center;
     width: 100%;
     height: 100%;
-    color: #fff;
-    line-height: 24px;
+    color: var(--white);
 }
 
 .inner-info {
@@ -659,7 +652,6 @@ ul {
 
 .radio-info,
 .non-radio-info {
-    line-height: 24px;
     color: var(--blackish);
     font-weight: normal;
     margin-bottom: 8px;
@@ -725,7 +717,7 @@ ul {
 .size-container input[type='radio']:checked + label {
     color: var(--blackish);
     border: unset;
-    background: #d6ecfb;
+    background: var(--radio-checked);
 }
 
 .color {
