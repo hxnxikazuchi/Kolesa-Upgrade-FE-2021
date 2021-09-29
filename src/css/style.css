@@ -339,6 +339,10 @@ a {
     transition: all 0.3s;
 }
 
+.item-order:hover {
+    background-color: #b3b2ff;
+}
+
 /* aside */
 
 ul {
