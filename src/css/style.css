@@ -51,6 +51,7 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1040px;
 }
 
 .search-wrapper form {
@@ -143,12 +144,18 @@ a {
 
 /* Main */
 
-.main {
-    max-width: 1040px;
+.main-aside-wrapper {
+    width: 100vw;
+    margin-top: 24px;
 }
 
-.main-aside-wrapper {
-    margin-top: 24px;
+.main-container {
+    display: flex;
+    gap: 0 132px;
+}
+
+.main {
+    max-width: 1040px;
 }
 
 .banner {
@@ -262,13 +269,30 @@ a {
     opacity: 1;
 }
 
-.goods-item img {
-    position: relative;
-    display: block;
+.goods-img-wrap {
     max-width: 330px;
+    position: relative;
 }
 
-.item-desc {
+.goods-item img {
+    display: block;
+    width: 100%;
+}
+
+.new-cloth {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 0 4px;
+    background-color: #64bd38;
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.goods-item .item-desc {
     padding: 16px;
     font-weight: 600;
 }
@@ -312,6 +336,64 @@ a {
     line-height: 24px;
     font-weight: 400;
     transition: all 0.3s;
+}
+
+/* aside */
+
+ul {
+    list-style-type: none;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px 0;
+}
+
+.nav-list a {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--blackish);
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: steelblue;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.nav-list li.active {
+    position: relative;
+}
+
+.nav-list li.active a {
+    font-weight: 600;
+}
+
+.nav-list li.active a::after {
+    display: none;
+}
+
+.nav-list li.active::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    bottom: -8px;
+    width: 4px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: var(--bluish);
 }
 
 /* Modal */
