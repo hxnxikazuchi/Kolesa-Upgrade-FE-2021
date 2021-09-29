@@ -19,6 +19,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #1c1819;
+    padding: 32px 32px 0 40px;
+    overflow: hidden;
 }
 
 a {
@@ -38,7 +40,6 @@ a {
 
 .inner-header {
     display: flex;
-    padding: 32px 32px 0 32px;
 }
 
 .logo {
@@ -67,6 +68,11 @@ a {
     line-height: 28px;
     font-weight: normal;
     outline: none;
+    transition: all 0.3s;
+}
+
+.search-wrapper input[type='text']:focus {
+    border: 1px solid #d3d3e9;
 }
 
 .search-btn {
@@ -89,6 +95,12 @@ a {
     transform: scale(0.9);
 }
 
+.search-btn:active {
+    filter:
+        invert(82%) sepia(17%) saturate(468%) hue-rotate(169deg)
+        brightness(83%) contrast(88%);
+}
+
 .user-header {
     display: flex;
     gap: 0 16px;
@@ -103,17 +115,74 @@ a {
 .user-name {
     font-weight: 600;
     line-height: 24px;
-    color: #2a81dd;
+    color: var(--bluish);
 }
 
 .user-point {
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
-    color: #1c1819;
+    color: var(--blackish);
 }
 
 /* Main */
+
+.main-aside-wrapper {
+    margin-top: 24px;
+}
+
+.banner {
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.about-points {
+    display: flex;
+    gap: 0 24px;
+}
+
+.about-points a {
+    width: 100%;
+    max-width: 330px;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.about-points div {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    gap: 0 16px;
+    color: var(--blackish);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.green-points {
+    background: #eff8eb;
+}
+
+.green-points:hover {
+    background: #b3e59c;
+}
+
+.yellow-points {
+    background: #fffae7;
+}
+
+.yellow-points:hover {
+    background: #fff0b2;
+}
+
+.blue-points {
+    background: #e9f2fb;
+}
+
+.blue-points:hover {
+    background: #b8d2ef;
+}
 
 /* Modal */
 .modal {
