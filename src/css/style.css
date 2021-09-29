@@ -343,6 +343,10 @@ a {
     background-color: #b3b2ff;
 }
 
+.item-order:active {
+    background-color: #5885c0;
+}
+
 /* aside */
 
 ul {
