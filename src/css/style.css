@@ -331,6 +331,7 @@ a {
     padding: 10px 0;
     width: 100%;
     max-width: 298px;
+    min-height: 44px;
     border: none;
     cursor: pointer;
     border-radius: 8px;
