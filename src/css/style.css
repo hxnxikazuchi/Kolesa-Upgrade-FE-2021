@@ -397,7 +397,7 @@ ul {
 .nav-list li.active::before {
     content: '';
     position: absolute;
-    left: -8px;
+    left: -12px;
     bottom: -8px;
     width: 4px;
     height: 36px;
