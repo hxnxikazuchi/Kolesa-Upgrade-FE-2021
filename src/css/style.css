@@ -24,6 +24,7 @@ body {
     color: var(--blackish);
     overflow-x: hidden;
     line-height: 24px;
+    min-height: 100vh;
 }
 
 a {
