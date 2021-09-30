@@ -409,7 +409,7 @@ ul {
 /* footer */
 
 .footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100vw;
     background-color: var(--blackish);
