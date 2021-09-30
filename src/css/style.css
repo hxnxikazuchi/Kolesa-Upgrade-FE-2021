@@ -337,6 +337,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
 }
 
 .item-order:hover {
