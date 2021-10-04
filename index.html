@@ -8,8 +8,167 @@
         <title>Vite App</title>
     </head>
     <body>
+        <header class="header">
+            <div class="container">
+                <div class="inner-header">
+                    <img
+                        class="logo"
+                        src="src/assets/img/logo.svg"
+                        alt="kolesa-logo"
+                    />
+                    <div class="search-user">
+                        <div class="search-wrapper">
+                            <form action="#">
+                                <button class="search-btn"></button>
+                                <input
+                                    type="text"
+                                    placeholder="Поиск"
+                                    name="search"
+                                />
+                            </form>
+                        </div>
+                        <a href="#" class="user-header">
+                            <img
+                                src="src/assets/img/morti.svg"
+                                alt="user-photo"
+                            />
+                            <div class="user-name-points">
+                                <p class="user-name">Мортиджан</p>
+                                <p class="user-point">300 баллов</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-aside-wrapper">
+            <div class="container main-container">
+                <aside class="aside">
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="#">Оргсхема</a></li>
+                            <li><a href="#">Kolesa Team</a></li>
+                            <li class="active"><a href="#">Kolesa Shop</a></li>
+                            <li><a href="#">Картина компании</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Guidelines</a></li>
+                            <li><a href="#">Библиотека</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main class="main">
+                    <img
+                        class="banner"
+                        src="src/assets/img/banner.png"
+                        alt="banner"
+                    />
+                    <div class="about-points">
+                        <a href="#" class="green-points">
+                            <div>
+                                <img
+                                    src="src/assets/img/plus.svg"
+                                    alt="take-points"
+                                />
+                                Получить баллы
+                            </div>
+                        </a>
+                        <a href="#" class="yellow-points">
+                            <div>
+                                <img
+                                    src="src/assets/img/question.svg"
+                                    alt="how-to-get-points"
+                                />
+                                Как получить баллы
+                            </div>
+                        </a>
+                        <a href="#" class="blue-points">
+                            <div>
+                                <img
+                                    src="src/assets/img/present.svg"
+                                    alt="present-points"
+                                />
+                                Подарить баллы
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goods-wrapper">
+                        <div class="radio-buttons">
+                            <div class="radio-item">
+                                <input
+                                    type="radio"
+                                    id="item-radio-1"
+                                    name="radio-item"
+                                    value="Все товары"
+                                    checked
+                                />
+                                <label for="item-radio-1">Все товары</label>
+                            </div>
+                            <div class="radio-item">
+                                <input
+                                    type="radio"
+                                    id="item-radio-2"
+                                    name="radio-item"
+                                    value="Одежда"
+                                />
+                                <label for="item-radio-2">Одежда</label>
+                            </div>
+                            <div class="radio-item">
+                                <input
+                                    type="radio"
+                                    id="item-radio-3"
+                                    name="radio-item"
+                                    value="Аксессуары"
+                                />
+                                <label for="item-radio-3">Аксессуары</label>
+                            </div>
+                        </div>
+                        <div class="goods"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="social-logo">
+                        <div class="footer-logo">© Kolesa Group</div>
+                        <ul class="footer-social">
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="src/assets/img/insta.svg"
+                                        alt="insta"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="src/assets/img/youtube.svg"
+                                        alt="youtube"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img src="src/assets/img/vk.svg" alt="vk"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact-us">
+                        <p>
+                            Есть идеи что улучшить? <br />
+                            Не знаешь, с кем решить проблему?
+                        </p>
+                        <div class="write-us">
+                            <a href="#">Написать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <div class="modal">
-            <!-- <div class="x-y-centering"> -->
             <div class="modal-container">
                 <div class="modal-dialog">
                     <div class="goods-img-section">
@@ -163,8 +322,7 @@
                     </button>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
-        <script type="module" src="/src/js/main.js"></script>
+        <script type="module" src="src/js/main.js"></script>
     </body>
 </html>
