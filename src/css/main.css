@@ -1,203 +1,32 @@
-/* Main */
-
-.main-aside-wrapper {
-    width: 100vw;
-    margin-top: 24px;
-}
-
-.main-container {
-    display: flex;
-    gap: 0 132px;
-    padding: 0 40px 0 32px;
-}
-
-.main {
-    max-width: 1040px;
-}
-
-.banner {
-    display: block;
-    border-radius: 8px;
-    margin-bottom: 24px;
-}
-
-.about-points {
-    display: flex;
-    gap: 0 24px;
-}
-
-.about-points a {
-    width: 100%;
-    max-width: 330px;
-    border-radius: 16px;
-    transition: all 0.3s;
-}
-
-.about-points div {
-    display: flex;
-    align-items: center;
-    padding: 10px 25px;
-    gap: 0 16px;
-    color: var(--blackish);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
-}
-
-.green-points {
-    background: #eff8eb;
-}
-
-.green-points:hover {
-    background: #b3e59c;
-}
-
-.yellow-points {
-    background: #fffae7;
-}
-
-.yellow-points:hover {
-    background: #fff0b2;
-}
-
-.blue-points {
-    background: #e9f2fb;
-}
-
-.blue-points:hover {
-    background: #b8d2ef;
-}
-
-.radio-buttons {
-    display: flex;
-    align-items: center;
-    gap: 0 8px;
-    margin-top: 40px;
-}
-
-.radio-item {
-    display: inline-block;
-}
-
-.radio-item input[type='radio'] {
-    display: none;
-}
-
-.radio-item label {
-    display: inline-block;
-    padding: 6px 15px;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 8px;
-    border: 1px solid rgba(28, 24, 25, 0.1);
-    text-align: center;
-    font-weight: 400;
-    color: var(--bluish);
-}
-
-.radio-item input[type='radio']:checked + label {
-    border: none;
-    background: var(--radio-checked);
-    color: var(--blackish);
-}
-
-.goods {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px 24px;
-    margin-top: 16px;
-    margin-bottom: 192px;
-}
-
-.goods-item {
-    display: flex;
-    flex-direction: column;
-    min-height: 330px;
-    max-width: 330px;
-    border-radius: 8px;
-    transition: all 0.3s;
-}
-
-.goods-item:hover {
-    box-shadow: 0 2px 10px rgba(28, 24, 25, 0.1);
-}
-
-.goods-item:hover .item-order {
-    opacity: 1;
-}
-
-.goods-img-wrap {
-    max-width: 330px;
-    position: relative;
-}
-
-.goods-item img {
-    display: block;
-    width: 100%;
-}
-
-.new-cloth {
-    position: absolute;
-    left: 16px;
-    bottom: 16px;
-    padding: 0 4px;
-    background-color: #64bd38;
-    color: var(--white);
-    font-size: 13px;
-    line-height: 20px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-.goods-item .item-desc {
-    padding: 16px;
-    font-weight: 600;
-}
-
-.item-cost {
-    font-size: 24px;
-    line-height: 36px;
-    color: var(--bluish);
-    margin-bottom: 8px;
-}
-
-.item-name {
-    font-size: 16px;
-    color: var(--blackish);
-    margin-bottom: 4px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.item-size {
-    font-weight: 400;
-    color: var(--grey);
-    margin-bottom: 16px;
-}
-
-.item-order {
-    opacity: 0;
-    background-color: var(--bluish);
-    color: var(--white);
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    max-width: 298px;
-    min-height: 44px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    transition: all 0.3s;
-    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
-}
-
-.item-order:hover {
-    background-color: #b3b2ff;
-}
-
-.item-order:active {
-    background-color: #5885c0;
-}
+.main-aside-wrapper { width: 100vw; margin-top: 24px }
+.main-container { display: flex; gap: 0 132px; padding: 0 40px 0 32px }
+.main { max-width: 1040px }
+.banner { display: block; border-radius: 8px; margin-bottom: 24px }
+.about-points { display: flex; gap: 0 24px }
+.about-points a { width: 100%; max-width: 330px; border-radius: 16px; transition: all 0.3s }
+.about-points div { display: flex; align-items: center; padding: 10px 25px; gap: 0 16px; color: var(--blackish); font-weight: 600; font-size: 20px; line-height: 32px }
+.green-points { background: #eff8eb }
+.green-points:hover { background: #b3e59c }
+.yellow-points { background: #fffae7 }
+.yellow-points:hover { background: #fff0b2 }
+.blue-points { background: #e9f2fb }
+.blue-points:hover { background: #b8d2ef }
+.radio-buttons { display: flex; align-items: center; gap: 0 8px; margin-top: 40px }
+.radio-item { display: inline-block }
+.radio-item input[type='radio'] { display: none }
+.radio-item label { display: inline-block; padding: 6px 15px; cursor: pointer; user-select: none; border-radius: 8px; border: 1px solid rgba(28, 24, 25, 0.1); text-align: center; font-weight: 400; color: var(--bluish) }
+.radio-item input[type='radio']:checked + label { border: none; background: var(--radio-checked); color: var(--blackish) }
+.goods { display: flex; flex-wrap: wrap; gap: 24px 24px; margin-top: 16px; margin-bottom: 192px }
+.goods-item { display: flex; flex-direction: column; min-height: 330px; max-width: 330px; border-radius: 8px; transition: all 0.3s }
+.goods-item:hover { box-shadow: 0 2px 10px rgba(28, 24, 25, 0.1) }
+.goods-item:hover .item-order { opacity: 1 }
+.goods-img-wrap { max-width: 330px; position: relative }
+.goods-item img { display: block; width: 100% }
+.new-cloth { position: absolute; left: 16px; bottom: 16px; padding: 0 4px; background-color: #64bd38; color: var(--white); font-size: 13px; line-height: 20px; border-radius: 3px; text-transform: uppercase }
+.goods-item .item-desc { padding: 16px; font-weight: 600 }
+.item-cost { font-size: 24px; line-height: 36px; color: var(--bluish); margin-bottom: 8px }
+.item-name { font-size: 16px; color: var(--blackish); margin-bottom: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis }
+.item-size { font-weight: 400; color: var(--grey); margin-bottom: 16px }
+.item-order { opacity: 0; background-color: var(--bluish); color: var(--white); text-align: center; padding: 10px 0; width: 100%; max-width: 298px; min-height: 44px; border: none; cursor: pointer; border-radius: 8px; font-size: 16px; font-weight: 400; transition: all 0.3s; box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1) }
+.item-order:hover { background-color: #b3b2ff }
+.item-order:active { background-color: #5885c0 }
