@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-@import url('header.css');
-@import url('main.css');
-@import url('aside.css');
-@import url('footer.css');
-@import url('modal.css');
+@import url('header');
+@import url('main');
+@import url('aside');
+@import url('footer');
+@import url('modal');
 
 :root {
     --blackish: #1c1819;
@@ -12,6 +12,12 @@
     --radio-checked: #d6ecfb;
     --white: #fff;
 }
+
+$black: var(--blackish);
+$blue: var(--bluish);
+$grey: var(--grey);
+$radioChecked: var(--radio-checked);
+$white: var(--white);
 
 * {
     box-sizing: border-box;
