@@ -10,24 +10,21 @@
     --bluish: #2a81dd;
     --grey: #888b94;
     --radio-checked: #d6ecfb;
-    --white: #fff;
+    --white: #fff
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 html,
 body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
-
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth }
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -36,14 +33,11 @@ body {
     overflow-x: hidden;
     line-height: 24px;
     min-height: 100vh;
-    position: relative;
+    position: relative
 }
-
-a {
-    text-decoration: none;
-}
+a { text-decoration: none }
 
 .container {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto
 }
