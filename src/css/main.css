@@ -13,7 +13,7 @@
 .about-points--blue:hover { background: #b8d2ef }
 .radio-buttons { display: flex; align-items: center; gap: 0 8px; margin-top: 40px }
 .radio-item { display: inline-block }
-.radio-item input [type='radio'] { display: none }
+.radio-item input[type='radio'] { display: none }
 .radio-item label { display: inline-block; padding: 6px 15px; cursor: pointer; user-select: none; border-radius: 8px; border: 1px solid rgba(28, 24, 25, 0.1); text-align: center; font-weight: 400; color: var(--bluish) }
 .radio-item input[type='radio']:checked + label { border: none; background: var(--radio-checked); color: var(--blackish) }
 .goods { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px 24px; margin-top: 16px; margin-bottom: 192px }
