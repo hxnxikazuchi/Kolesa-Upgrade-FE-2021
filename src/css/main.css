@@ -27,6 +27,6 @@
 .item-desc__cost { font-size: 24px; line-height: 36px; color: var(--bluish); margin-bottom: 8px }
 .item-desc__name { font-size: 16px; color: var(--blackish); margin-bottom: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis }
 .item-desc__size { font-weight: 400; color: var(--grey); margin-bottom: 16px }
-.item-desc__order { opacity: 0; background-color: var(--bluish); color: var(--white); text-align: center; padding: 10px 0; width: 100%; max-width: 298px; min-height: 44px; border: none; cursor: pointer; border-radius: 8px; font-size: 16px; font-weight: 400; transition: all 0.3s; box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1) }
+.item-desc__order { border-radius: 8px; opacity: 0; background-color: var(--bluish); color: var(--white); text-align: center; padding: 10px 0; width: 100%; max-width: 298px; min-height: 44px; border: none; cursor: pointer; font-size: 16px; font-weight: 400; transition: all 0.3s; box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1) }
 .item-desc__order:hover { background-color: #b3b2ff }
 .item-desc__order:active { background-color: #5885c0 }
