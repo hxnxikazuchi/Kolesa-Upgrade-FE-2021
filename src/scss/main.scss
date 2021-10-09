@@ -32,14 +32,14 @@
     justify-content: center;
     gap: 24px 24px;
 
-    a {
+    &__link {
         width: 100%;
         max-width: 330px;
         border-radius: 16px;
         transition: all 0.3s;
     }
 
-    div {
+    &__item {
         display: flex;
         align-items: center;
         padding: 10px 25px;
