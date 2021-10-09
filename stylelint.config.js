@@ -3,10 +3,9 @@ module.exports = {
     // add your custom config here
     // https://stylelint.io/user-guide/configuration
     rules:   {
-        indentation:                                      4,
-        'string-quotes':                                  'single',
-        'declaration-block-single-line-max-declarations': 15,
-        'at-rule-no-unknown':                             [
+        indentation:          4,
+        'string-quotes':      'single',
+        'at-rule-no-unknown': [
             true,
             {
                 ignoreAtRules: [
