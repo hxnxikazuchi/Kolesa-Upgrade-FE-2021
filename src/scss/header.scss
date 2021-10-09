@@ -1,3 +1,5 @@
+@import './_variables';
+
 .header {
     width: 100vw;
 
@@ -17,6 +19,45 @@
     align-items: center;
     width: 100%;
     max-width: 1040px;
+
+    .user {
+        display: flex;
+        gap: 0 16px;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 0%;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            height: 2px;
+            background-color: steelblue;
+            transition: all 0.5s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        img {
+            display: block;
+            border-radius: 50%;
+        }
+
+        &__name {
+            font-weight: 600;
+            color: $blue;
+        }
+
+        &__point {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 20px;
+            color: $black;
+        }
+    }
 }
 
 .search {
@@ -66,44 +107,5 @@
         filter:
             invert(82%) sepia(17%) saturate(468%) hue-rotate(169deg)
             brightness(83%) contrast(88%);
-    }
-}
-
-.user {
-    display: flex;
-    gap: 0 16px;
-    text-decoration: none;
-    position: relative;
-
-    &::after {
-        content: '';
-        width: 0%;
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        height: 2px;
-        background-color: steelblue;
-        transition: all 0.5s;
-    }
-
-    &:hover::after {
-        width: 100%;
-    }
-
-    img {
-        display: block;
-        border-radius: 50%;
-    }
-
-    &__name {
-        font-weight: 600;
-        color: $blue;
-    }
-
-    &__point {
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 20px;
-        color: $black;
     }
 }

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-@import url('header');
-@import url('main');
-@import url('aside');
-@import url('footer');
-@import url('modal');
-@import url('variables');
+@import './header';
+@import './main';
+@import './aside';
+@import './footer';
+@import './modal';
+@import './_variables';
 
 * {
     box-sizing: border-box;

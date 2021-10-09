@@ -1,3 +1,5 @@
+@import './_variables';
+
 @mixin border-radius8 {
     border-radius: 8px;
 }
@@ -42,7 +44,7 @@
         align-items: center;
         padding: 10px 25px;
         gap: 0 16px;
-        color: var(--blackish);
+        color: $black;
         font-weight: 600;
         font-size: 20px;
         line-height: 32px;
@@ -96,13 +98,13 @@
         border: 1px solid rgba(28, 24, 25, 0.1);
         text-align: center;
         font-weight: 400;
-        color: var(--bluish);
+        color: $blue;
     }
 
     input[type='radio']:checked + label {
         border: none;
-        background: var(--radio-checked);
-        color: var(--blackish);
+        background: $radioChecked;
+        color: $black;
     }
 }
 
@@ -148,7 +150,7 @@
     bottom: 16px;
     padding: 0 4px;
     background-color: #64bd38;
-    color: var(--white);
+    color: $white;
     font-size: 13px;
     line-height: 20px;
     border-radius: 3px;
@@ -162,13 +164,13 @@
     &__cost {
         font-size: 24px;
         line-height: 36px;
-        color: var(--bluish);
+        color: $blue;
         margin-bottom: 8px;
     }
 
     &__name {
         font-size: 16px;
-        color: var(--blackish);
+        color: $black;
         margin-bottom: 4px;
         overflow: hidden;
         white-space: nowrap;
@@ -177,7 +179,7 @@
 
     &__size {
         font-weight: 400;
-        color: var(--grey);
+        color: $grey;
         margin-bottom: 16px;
     }
 
@@ -185,8 +187,8 @@
         @include border-radius8;
 
         opacity: 0;
-        background-color: var(--bluish);
-        color: var(--white);
+        background-color: $blue;
+        color: $white;
         text-align: center;
         padding: 10px 0;
         width: 100%;

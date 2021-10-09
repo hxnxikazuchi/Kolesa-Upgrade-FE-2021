@@ -1,3 +1,5 @@
+import '../scss/style.scss';
+
 class GoodsItem {
     constructor(src, alt, price, title, newCLoth, size, parentSelector) {
         this.src = src;

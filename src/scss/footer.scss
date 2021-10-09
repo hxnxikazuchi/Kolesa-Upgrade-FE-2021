@@ -1,11 +1,13 @@
+@import './_variables';
+
 .footer {
     position: absolute;
     bottom: 0;
     width: 100vw;
-    background-color: var(--blackish);
+    background-color: $black;
 
     &__logo {
-        color: var(--white);
+        color: $white;
         font-weight: normal;
         font-size: 16px;
     }
@@ -54,7 +56,7 @@
 
     p {
         font-weight: 400;
-        color: var(--white);
+        color: $white;
     }
 }
 
@@ -63,7 +65,7 @@
     max-width: 150px;
     max-height: 36px;
     padding: 6px 0;
-    background-color: var(--white);
+    background-color: $white;
     box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
     border-radius: 8px;
     transition: all 0.3s;
@@ -76,6 +78,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--bluish);
+        color: $blue;
     }
 }
