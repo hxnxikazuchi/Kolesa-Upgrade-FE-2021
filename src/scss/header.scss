@@ -3,7 +3,7 @@
 .header {
     width: 100vw;
 
-    &__inner {
+    &__wrapper {
         padding: 32px 40px 0 32px;
         display: flex;
     }
@@ -11,16 +11,18 @@
     &__logo {
         margin-right: 66px;
     }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1040px;
+    }
 }
 
-.search-user {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1040px;
-
-    .user {
+.inner {
+    &__user {
         display: flex;
         gap: 0 16px;
         text-decoration: none;
@@ -40,32 +42,13 @@
         &:hover::after {
             width: 100%;
         }
-
-        img {
-            display: block;
-            border-radius: 50%;
-        }
-
-        &__name {
-            font-weight: 600;
-            color: $blue;
-        }
-
-        &__point {
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 20px;
-            color: $black;
-        }
     }
-}
 
-.search {
-    form {
+    &__form {
         position: relative;
     }
 
-    input[type='text'] {
+    &__input {
         height: 44px;
         padding: 8px 8px 8px 56px;
         border: none;
@@ -77,10 +60,10 @@
         font-weight: normal;
         outline: none;
         transition: all 0.3s;
-    }
 
-    input[type='text']:focus {
-        border: 1px solid #d3d3e9;
+        &:focus {
+            border: 1px solid #d3d3e9;
+        }
     }
 
     &__btn {
@@ -97,15 +80,34 @@
         outline: none;
         cursor: pointer;
         transition: all 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+
+        &:active {
+            filter:
+                invert(82%) sepia(17%) saturate(468%) hue-rotate(169deg)
+                brightness(83%) contrast(88%);
+        }
+    }
+}
+
+.user {
+    &__img {
+        display: block;
+        border-radius: 50%;
     }
 
-    &__btn:hover {
-        transform: scale(0.9);
+    &__name {
+        font-weight: 600;
+        color: $blue;
     }
 
-    &__btn:active {
-        filter:
-            invert(82%) sepia(17%) saturate(468%) hue-rotate(169deg)
-            brightness(83%) contrast(88%);
+    &__point {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        color: $black;
     }
 }
