@@ -1,0 +1,83 @@
+@import './_variables';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background-color: $black;
+
+    &__logo {
+        color: $white;
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    &__img {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__social {
+        li {
+            transition: all 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 32px;
+}
+
+.social-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+    }
+}
+
+.footer-contact-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 450px;
+
+    p {
+        font-weight: 400;
+        color: $white;
+    }
+}
+
+.write-us__btn {
+    width: 100%;
+    max-width: 150px;
+    max-height: 36px;
+    padding: 6px 0;
+    background-color: $white;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: rgb(214, 209, 209);
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blue;
+    }
+}

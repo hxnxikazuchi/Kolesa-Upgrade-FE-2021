@@ -1,3 +1,5 @@
+import '../scss/style.scss';
+
 class GoodsItem {
     constructor(src, alt, price, title, newCLoth, size, parentSelector) {
         this.src = src;
@@ -14,20 +16,20 @@ class GoodsItem {
 
         element.innerHTML = `
 
-            <div class="goods-item">
-                <div class="goods-img-wrap">
+            <div class="goods__item">
+                <div class="goods__img-wrap">
                     <img
                         src=${this.src} alt="${this.alt}"
                     />
                     <div class="new-cloth">${this.newCLoth}</div>
                 </div>
                 <div class="item-desc">
-                    <p class="item-cost">${this.price} баллов</p>
-                    <p class="item-name">
+                    <p class="item-desc__cost">${this.price} баллов</p>
+                    <p class="item-desc__name">
                         ${this.title}
                     </p>
-                    <p class="item-size">Размер ${this.size}</p>
-                    <button class="item-order">Заказать</button>
+                    <p class="item-desc__size">Размер ${this.size}</p>
+                    <button class="item-desc__order">Заказать</button>
                 </div>
             </div>
         `;

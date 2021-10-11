@@ -4,37 +4,38 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/css/style.css" />
         <title>Vite App</title>
     </head>
     <body>
         <header class="header">
-            <div class="container">
-                <div class="inner-header">
+            <div class="header-container container">
+                <div class="header__wrapper">
                     <img
-                        class="logo"
+                        class="header__logo"
                         src="src/assets/img/logo.svg"
                         alt="kolesa-logo"
                     />
-                    <div class="search-user">
-                        <div class="search-wrapper">
-                            <form action="#">
-                                <button class="search-btn"></button>
+                    <div class="header__inner inner">
+                        <div class="inner__search">
+                            <form class="inner__form" action="#">
+                                <button class="inner__btn"></button>
                                 <input
                                     type="text"
                                     placeholder="Поиск"
                                     name="search"
+                                    class="inner__input"
                                 />
                             </form>
                         </div>
-                        <a href="#" class="user-header">
+                        <a href="#" class="inner__user user">
                             <img
                                 src="src/assets/img/morti.svg"
                                 alt="user-photo"
+                                class="user__img"
                             />
-                            <div class="user-name-points">
-                                <p class="user-name">Мортиджан</p>
-                                <p class="user-point">300 баллов</p>
+                            <div class="user__name-points">
+                                <p class="user__name">Мортиджан</p>
+                                <p class="user__point">300 баллов</p>
                             </div>
                         </a>
                     </div>
@@ -65,8 +66,8 @@
                         alt="banner"
                     />
                     <div class="about-points">
-                        <a href="#" class="green-points">
-                            <div>
+                        <a href="#" class="about-points__link about-points--green">
+                            <div class="about-points__item">
                                 <img
                                     src="src/assets/img/plus.svg"
                                     alt="take-points"
@@ -74,8 +75,8 @@
                                 Получить баллы
                             </div>
                         </a>
-                        <a href="#" class="yellow-points">
-                            <div>
+                        <a href="#" class="about-points__link about-points--yellow">
+                            <div class="about-points__item">
                                 <img
                                     src="src/assets/img/question.svg"
                                     alt="how-to-get-points"
@@ -83,8 +84,8 @@
                                 Как получить баллы
                             </div>
                         </a>
-                        <a href="#" class="blue-points">
-                            <div>
+                        <a href="#" class="about-points__link about-points--blue">
+                            <div class="about-points__item">
                                 <img
                                     src="src/assets/img/present.svg"
                                     alt="present-points"
@@ -133,13 +134,14 @@
             <div class="container">
                 <div class="footer-wrapper">
                     <div class="social-logo">
-                        <div class="footer-logo">© Kolesa Group</div>
-                        <ul class="footer-social">
+                        <div class="footer__logo">© Kolesa Group</div>
+                        <ul class="footer__social">
                             <li>
                                 <a href="#"
                                     ><img
                                         src="src/assets/img/insta.svg"
                                         alt="insta"
+                                        class="footer__img"
                                 /></a>
                             </li>
                             <li>
@@ -147,11 +149,15 @@
                                     ><img
                                         src="src/assets/img/youtube.svg"
                                         alt="youtube"
+                                        class="footer__img"
                                 /></a>
                             </li>
                             <li>
                                 <a href="#"
-                                    ><img src="src/assets/img/vk.svg" alt="vk"
+                                    ><img
+                                        src="src/assets/img/vk.svg"
+                                        alt="vk"
+                                        class="footer__img"
                                 /></a>
                             </li>
                         </ul>
@@ -161,7 +167,7 @@
                             Есть идеи что улучшить? <br />
                             Не знаешь, с кем решить проблему?
                         </p>
-                        <div class="write-us">
+                        <div class="write-us__btn">
                             <a href="#">Написать</a>
                         </div>
                     </div>
@@ -169,8 +175,8 @@
             </div>
         </footer>
         <div class="modal">
-            <div class="modal-container">
-                <div class="modal-dialog">
+            <div class="modal__container">
+                <div class="modal__dialog">
                     <div class="goods-img-section">
                         <div class="main-img">
                             <img
@@ -202,7 +208,7 @@
                             </h3>
                             <p class="points">100 баллов</p>
                             <div class="order">
-                                <a class="btn" href="#">Заказать</a>
+                                <a class="order__btn" href="#">Заказать</a>
                             </div>
                             <div class="client-points">
                                 <div class="money">
@@ -225,7 +231,9 @@
                                             checked
                                         />
                                         <label for="radio-color-1">
-                                            <div class="color color-blue"></div>
+                                            <div
+                                                class="color color__blue"
+                                            ></div>
                                             Синий</label
                                         >
                                     </div>
@@ -240,7 +248,7 @@
                                         />
                                         <label for="radio-color-2"
                                             ><div
-                                                class="color color-whitish"
+                                                class="color color__whitish"
                                             ></div>
                                             Бежевый</label
                                         >
@@ -255,7 +263,7 @@
                                         />
                                         <label for="radio-color-3"
                                             ><div
-                                                class="color color-grey"
+                                                class="color color__grey"
                                             ></div>
                                             Серый</label
                                         >
@@ -314,7 +322,7 @@
                             </section>
                         </div>
                     </div>
-                    <button class="modal-close">
+                    <button class="modal__close">
                         <img
                             src="./src/assets/img/close-big.svg"
                             alt="close-modal"
