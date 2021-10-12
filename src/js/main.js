@@ -293,8 +293,8 @@ modalClose.addEventListener('click', () => {
     }
 });
 
-modal.addEventListener('click', () => {
-    if (modal.style.display === 'block') {
+modal.addEventListener('click', (e) => {
+    if (e.target === modal && modal.style.display === 'block') {
         modal.style.display = 'none';
 
         if (modalDialog.querySelector('.modal__inner')) {
