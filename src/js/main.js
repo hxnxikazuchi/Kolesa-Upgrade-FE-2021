@@ -228,58 +228,60 @@ sortedItems.forEach((item) => {
 
 categories.forEach((button) => {
     button.addEventListener('click', () => {
-        const categoryKey = button.dataset.key;
+        if (button.dataset.key) {
+            const categoryKey = button.dataset.key;
 
-        document.querySelector('.goods').innerHTML = '';
+            document.querySelector('.goods').innerHTML = '';
 
-        if (categoryKey === 'clothes') {
-            sortedCloth.forEach((item) => {
-                const {
-                    img, price, title, isNew,
-                } = item;
-                const itemHtml = new GoodsItem(
-                    img,
-                    price,
-                    title,
-                    isNew,
-                    true,
-                    '.goods-wrapper .goods',
-                );
+            if (categoryKey === 'clothes') {
+                sortedCloth.forEach((item) => {
+                    const {
+                        img, price, title, isNew,
+                    } = item;
+                    const itemHtml = new GoodsItem(
+                        img,
+                        price,
+                        title,
+                        isNew,
+                        true,
+                        '.goods-wrapper .goods',
+                    );
 
-                itemHtml.render();
-            });
-        } else if (categoryKey === 'accessories') {
-            sortedAccessories.forEach((item) => {
-                const {
-                    img, price, title, isNew,
-                } = item;
-                const itemHtml = new GoodsItem(
-                    img,
-                    price,
-                    title,
-                    isNew,
-                    false,
-                    '.goods-wrapper .goods',
-                );
+                    itemHtml.render();
+                });
+            } else if (categoryKey === 'accessories') {
+                sortedAccessories.forEach((item) => {
+                    const {
+                        img, price, title, isNew,
+                    } = item;
+                    const itemHtml = new GoodsItem(
+                        img,
+                        price,
+                        title,
+                        isNew,
+                        false,
+                        '.goods-wrapper .goods',
+                    );
 
-                itemHtml.render();
-            });
-        } else if (categoryKey === 'all') {
-            sortedItems.forEach((item) => {
-                const {
-                    img, price, title, isNew,
-                } = item;
-                const itemHtml = new GoodsItem(
-                    img,
-                    price,
-                    title,
-                    isNew,
-                    true,
-                    '.goods-wrapper .goods',
-                );
+                    itemHtml.render();
+                });
+            } else if (categoryKey === 'all') {
+                sortedItems.forEach((item) => {
+                    const {
+                        img, price, title, isNew,
+                    } = item;
+                    const itemHtml = new GoodsItem(
+                        img,
+                        price,
+                        title,
+                        isNew,
+                        true,
+                        '.goods-wrapper .goods',
+                    );
 
-                itemHtml.render();
-            });
+                    itemHtml.render();
+                });
+            }
         }
     });
 });
