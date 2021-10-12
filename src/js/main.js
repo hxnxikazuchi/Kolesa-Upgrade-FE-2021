@@ -3,7 +3,6 @@ import clothes from './clothes';
 import accessories from './accessories';
 
 const categories = document.querySelectorAll('.js__category-button');
-const goodsItems = document.querySelectorAll('.goods__item');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalDialog = document.querySelector('.modal__dialog');
@@ -283,25 +282,6 @@ categories.forEach((button) => {
                 });
             }
         }
-    });
-});
-
-goodsItems.forEach((item) => {
-    item.addEventListener('click', () => {
-        modal.style.display = 'block';
-        const image = item.querySelector('img').src;
-        const price = item.querySelector('.item-desc__cost').innerHTML;
-        const title = item.querySelector('.item-desc__name').innerHTML;
-        const modalInfo = new GoodsItem(
-            image,
-            price,
-            title,
-            false,
-            false,
-            '.modal__dialog',
-        );
-
-        modalInfo.renderModal();
     });
 });
 
