@@ -1,5 +1,11 @@
 import '../scss/style.scss';
 
+const categories = document.querySelectorAll('.js__category-button');
+const goodsItems = document.querySelectorAll('.goods__item');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
+const modalDialog = document.querySelector('.modal__dialog');
+
 class GoodsItem {
     constructor(src, price, title, isNew, size, parentSelector) {
         this.src = src;
@@ -14,7 +20,6 @@ class GoodsItem {
         const element = document.createElement('div');
 
         element.innerHTML = `
-
             <div class="goods__item">
                 <div class="goods__img-wrap">
                     <img
@@ -27,12 +32,33 @@ class GoodsItem {
                     <p class="item-desc__name">
                         ${this.title}
                     </p>
-                    ${this.size ? '<p class="item-desc__size">Размер S/M/L</p>' : ''}
+                    ${
+                        this.size
+                            ? '<p class="item-desc__size">Размер S/M/L</p>'
+                            : ''
+                    }
                     <button class="item-desc__order">Заказать</button>
                 </div>
             </div>
         `;
         this.parent.append(element);
+
+        element.addEventListener('click', () => {
+            modal.style.display = 'block';
+            const image = element.querySelector('img').src;
+            const price = element.querySelector('.item-desc__cost').innerHTML;
+            const title = element.querySelector('.item-desc__name').innerHTML;
+            const modalInfo = new GoodsItem(
+                image,
+                price,
+                title,
+                false,
+                false,
+                '.modal__dialog',
+            );
+
+            modalInfo.renderModal();
+        });
     }
 
     renderModal() {
@@ -283,15 +309,17 @@ sortedItems.forEach((item) => {
     const {
         img, price, title, isNew,
     } = item;
-    const itemHtml = new GoodsItem(img, price, title, isNew, true, '.goods-wrapper .goods');
+    const itemHtml = new GoodsItem(
+        img,
+        price,
+        title,
+        isNew,
+        true,
+        '.goods-wrapper .goods',
+    );
 
     itemHtml.render();
 });
-const categories = document.querySelectorAll('.js__category-button');
-const goodsItems = document.querySelectorAll('.goods__item');
-const modal = document.querySelector('.modal');
-const modalClose = document.querySelector('.modal__close');
-const modalDialog = document.querySelector('.modal__dialog');
 
 categories.forEach((button) => {
     button.addEventListener('click', () => {
@@ -304,7 +332,14 @@ categories.forEach((button) => {
                 const {
                     img, price, title, isNew,
                 } = item;
-                const itemHtml = new GoodsItem(img, price, title, isNew, true, '.goods-wrapper .goods');
+                const itemHtml = new GoodsItem(
+                    img,
+                    price,
+                    title,
+                    isNew,
+                    true,
+                    '.goods-wrapper .goods',
+                );
 
                 itemHtml.render();
             });
@@ -313,7 +348,14 @@ categories.forEach((button) => {
                 const {
                     img, price, title, isNew,
                 } = item;
-                const itemHtml = new GoodsItem(img, price, title, isNew, false, '.goods-wrapper .goods');
+                const itemHtml = new GoodsItem(
+                    img,
+                    price,
+                    title,
+                    isNew,
+                    false,
+                    '.goods-wrapper .goods',
+                );
 
                 itemHtml.render();
             });
@@ -322,7 +364,14 @@ categories.forEach((button) => {
                 const {
                     img, price, title, isNew,
                 } = item;
-                const itemHtml = new GoodsItem(img, price, title, isNew, true, '.goods-wrapper .goods');
+                const itemHtml = new GoodsItem(
+                    img,
+                    price,
+                    title,
+                    isNew,
+                    true,
+                    '.goods-wrapper .goods',
+                );
 
                 itemHtml.render();
             });
@@ -336,7 +385,14 @@ goodsItems.forEach((item) => {
         const image = item.querySelector('img').src;
         const price = item.querySelector('.item-desc__cost').innerHTML;
         const title = item.querySelector('.item-desc__name').innerHTML;
-        const modalInfo = new GoodsItem(image, price, title, false, false, '.modal__dialog');
+        const modalInfo = new GoodsItem(
+            image,
+            price,
+            title,
+            false,
+            false,
+            '.modal__dialog',
+        );
 
         modalInfo.renderModal();
     });
