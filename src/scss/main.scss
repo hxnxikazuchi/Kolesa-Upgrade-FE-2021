@@ -119,14 +119,19 @@
     &__item {
         display: flex;
         flex-direction: column;
+        width: 100%;
         min-height: 330px;
         max-width: 330px;
         border-radius: 8px;
         transition: all 0.3s;
+        cursor: pointer;
 
         img {
             display: block;
             width: 100%;
+            min-width: 330px;
+            max-height: 330px;
+            object-fit: cover;
         }
 
         &:hover {
