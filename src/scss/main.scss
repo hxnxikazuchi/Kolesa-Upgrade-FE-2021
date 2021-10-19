@@ -1,0 +1,217 @@
+@import './_variables';
+
+@mixin border-radius8 {
+    border-radius: 8px;
+}
+
+.main-aside-wrapper {
+    width: 100vw;
+    padding-top: 24px;
+}
+
+.main-container {
+    display: flex;
+    gap: 0 132px;
+    padding: 0 40px 0 32px;
+}
+
+.main {
+    max-width: 1040px;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.about-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 24px;
+
+    &__link {
+        width: 100%;
+        max-width: 330px;
+        border-radius: 16px;
+        transition: all 0.3s;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 10px 25px;
+        gap: 0 16px;
+        color: $black;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    &--green {
+        background: #eff8eb;
+    }
+
+    &--green:hover {
+        background: #b3e59c;
+    }
+
+    &--yellow {
+        background: #fffae7;
+    }
+
+    &--yellow:hover {
+        background: #fff0b2;
+    }
+
+    &--blue {
+        background: #e9f2fb;
+    }
+
+    &--blue:hover {
+        background: #b8d2ef;
+    }
+}
+
+.radio-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    margin-top: 40px;
+}
+
+.radio-item {
+    display: inline-block;
+
+    input[type='radio'] {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        padding: 6px 15px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 8px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        text-align: center;
+        font-weight: 400;
+        color: $blue;
+    }
+
+    input[type='radio']:checked + label {
+        border: none;
+        background: $radioChecked;
+        color: $black;
+    }
+}
+
+.goods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px 24px;
+    margin-top: 16px;
+    margin-bottom: 192px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 330px;
+        max-width: 330px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        img {
+            display: block;
+            width: 100%;
+            min-width: 330px;
+            max-height: 330px;
+            object-fit: cover;
+        }
+
+        &:hover {
+            box-shadow: 0 2px 10px rgba(28, 24, 25, 0.1);
+        }
+
+        &:hover .item-desc__order {
+            opacity: 1;
+        }
+    }
+}
+
+.goods__img-wrap {
+    max-width: 330px;
+    position: relative;
+}
+
+.new-cloth {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 0 4px;
+    background-color: #64bd38;
+    color: $white;
+    font-size: 13px;
+    line-height: 20px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.item-desc {
+    padding: 16px;
+    font-weight: 600;
+
+    &__cost {
+        font-size: 24px;
+        line-height: 36px;
+        color: $blue;
+        margin-bottom: 8px;
+    }
+
+    &__name {
+        font-size: 16px;
+        color: $black;
+        margin-bottom: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__size {
+        font-weight: 400;
+        color: $grey;
+        margin-bottom: 16px;
+    }
+
+    &__order {
+        @include border-radius8;
+
+        opacity: 0;
+        background-color: $blue;
+        color: $white;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        max-width: 298px;
+        min-height: 44px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        transition: all 0.3s;
+        box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    }
+
+    &__order:hover {
+        background-color: #b3b2ff;
+    }
+
+    &__order:active {
+        background-color: #5885c0;
+    }
+}

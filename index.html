@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container container">
+                <div class="header__wrapper">
+                    <img
+                        class="header__logo"
+                        src="src/assets/img/logo.svg"
+                        alt="kolesa-logo"
+                    />
+                    <div class="header__inner inner">
+                        <div class="inner__search">
+                            <form class="inner__form" action="#">
+                                <button class="inner__btn"></button>
+                                <input
+                                    type="text"
+                                    placeholder="Поиск"
+                                    name="search"
+                                    class="inner__input"
+                                />
+                            </form>
+                        </div>
+                        <a href="#" class="inner__user user">
+                            <img
+                                src="src/assets/img/morti.svg"
+                                alt="user-photo"
+                                class="user__img"
+                            />
+                            <div class="user__name-points">
+                                <p class="user__name">Мортиджан</p>
+                                <p class="user__point">300 баллов</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-aside-wrapper">
+            <div class="container main-container">
+                <aside class="aside">
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="#">Оргсхема</a></li>
+                            <li><a href="#">Kolesa Team</a></li>
+                            <li class="active"><a href="#">Kolesa Shop</a></li>
+                            <li><a href="#">Картина компании</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Guidelines</a></li>
+                            <li><a href="#">Библиотека</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main class="main">
+                    <img
+                        class="banner"
+                        src="src/assets/img/banner.png"
+                        alt="banner"
+                    />
+                    <div class="about-points">
+                        <a
+                            href="#"
+                            class="about-points__link about-points--green"
+                        >
+                            <div class="about-points__item">
+                                <img
+                                    src="src/assets/img/plus.svg"
+                                    alt="take-points"
+                                />
+                                Получить баллы
+                            </div>
+                        </a>
+                        <a
+                            href="#"
+                            class="about-points__link about-points--yellow"
+                        >
+                            <div class="about-points__item">
+                                <img
+                                    src="src/assets/img/question.svg"
+                                    alt="how-to-get-points"
+                                />
+                                Как получить баллы
+                            </div>
+                        </a>
+                        <a
+                            href="#"
+                            class="about-points__link about-points--blue"
+                        >
+                            <div class="about-points__item">
+                                <img
+                                    src="src/assets/img/present.svg"
+                                    alt="present-points"
+                                />
+                                Подарить баллы
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goods-wrapper">
+                        <div class="radio-buttons">
+                            <div class="radio-item">
+                                <input
+                                    class="js__category-button"
+                                    type="radio"
+                                    id="item-radio-1"
+                                    name="radio-item"
+                                    value="Все товары"
+                                    data-key="all"
+                                    checked
+                                />
+                                <label for="item-radio-1">Все товары</label>
+                            </div>
+                            <div class="radio-item">
+                                <input
+                                    class="js__category-button"
+                                    type="radio"
+                                    id="item-radio-2"
+                                    name="radio-item"
+                                    value="Одежда"
+                                    data-key="clothes"
+                                />
+                                <label for="item-radio-2">Одежда</label>
+                            </div>
+                            <div class="radio-item">
+                                <input
+                                    class="js__category-button"
+                                    type="radio"
+                                    id="item-radio-3"
+                                    name="radio-item"
+                                    value="Аксессуары"
+                                    data-key="accessories"
+                                />
+                                <label for="item-radio-3">Аксессуары</label>
+                            </div>
+                        </div>
+                        <div class="goods"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="social-logo">
+                        <div class="footer__logo">© Kolesa Group</div>
+                        <ul class="footer__social">
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="src/assets/img/insta.svg"
+                                        alt="insta"
+                                        class="footer__img"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="src/assets/img/youtube.svg"
+                                        alt="youtube"
+                                        class="footer__img"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="src/assets/img/vk.svg"
+                                        alt="vk"
+                                        class="footer__img"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact-us">
+                        <p>
+                            Есть идеи что улучшить? <br />
+                            Не знаешь, с кем решить проблему?
+                        </p>
+                        <div class="write-us__btn">
+                            <a href="#">Написать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal">
+            <div class="modal__container">
+                <div class="modal__dialog">
+                    <button class="modal__close">
+                        <img
+                            src="./src/assets/img/close-big.svg"
+                            alt="close-modal"
+                        />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="src/js/main.js"></script>
+    </body>
+</html>
