@@ -1,5 +1,6 @@
 import { getItemsRequest, toggleFavoriteRequest } from './requests';
 import { showLoader, hideLoader } from './loader';
+import { showError } from './error';
 
 export default () => {
     document.querySelector('#error').style.display = 'none';
@@ -7,10 +8,7 @@ export default () => {
     getItemsRequest()
         .then(({ data }) => {
             if (data.result !== 'ok' || typeof data.html === 'undefined') {
-                const errorElement = document.querySelector('#error');
-
-                errorElement.innerHTML = 'Произошла ошибка, попробуйте ещё раз.';
-                errorElement.style.display = 'block';
+                showError(data);
             } else {
                 const appElement = document.querySelector('#app');
 
@@ -35,10 +33,7 @@ export default () => {
             }
         })
         .catch((e) => {
-            const errorElement = document.querySelector('#error');
-
-            errorElement.innerHTML = e.message;
-            errorElement.style.display = 'block';
+            showError(e);
         })
         .finally(() => {
             hideLoader();
