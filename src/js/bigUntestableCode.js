@@ -1,9 +1,9 @@
 import { getItemsRequest, toggleFavoriteRequest } from './requests';
+import { showLoader, hideLoader } from './loader';
 
 export default () => {
     document.querySelector('#error').style.display = 'none';
-    document.querySelector('#loader').style.display = 'block';
-
+    showLoader();
     getItemsRequest()
         .then(({ data }) => {
             if (data.result !== 'ok' || typeof data.html === 'undefined') {
@@ -16,23 +16,22 @@ export default () => {
 
                 appElement.innerHTML = data.html;
                 appElement.style.display = 'block';
-
-                Array.from(appElement.querySelector('button')).forEach((button) => {
-                    button.addEventListener('click', (e) => {
-                        e.preventDefault();
-
-                        e.currentTarget.textContent = 'Загрузка...';
-
-                        toggleFavoriteRequest(e.currentTarget.dataset.id)
-                            .then(({ data: buttonData }) => {
+                Array.from(appElement.querySelector('button')).forEach(
+                    (button) => {
+                        button.addEventListener('click', (e) => {
+                            e.currentTarget.textContent = 'Загрузка...';
+                            toggleFavoriteRequest(
+                                e.currentTarget.dataset.id,
+                            ).then(({ data: buttonData }) => {
                                 if (buttonData.result === 'set') {
                                     e.currentTarget.textContent = '🌝';
                                 } else {
                                     e.currentTarget.textContent = '🌚';
                                 }
                             });
-                    });
-                });
+                        });
+                    },
+                );
             }
         })
         .catch((e) => {
@@ -42,6 +41,6 @@ export default () => {
             errorElement.style.display = 'block';
         })
         .finally(() => {
-            document.querySelector('#loader').style.display = 'none';
+            hideLoader();
         });
 };
