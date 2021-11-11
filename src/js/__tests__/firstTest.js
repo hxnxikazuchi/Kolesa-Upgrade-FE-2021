@@ -24,10 +24,27 @@ describe('Группа тестов.', () => {
             .mockImplementationOnce(
                 () => Promise.reject(errorResponse),
             );
+        document.body.innerHTML = `
+        <div id="app">
+            <div id="error">
+                Error
+            </div>
+            <button id="loader">
+                Loader
+            </button>
+        </div>
+        `;
     });
 
     afterAll(() => {
         axios.get.mockRestore();
+        document.body.innerHTML = '';
+    });
+
+    test('Проверка блока app', () => {
+        const app = document.querySelector('#app').style.display;
+
+        expect(app).toMatchSnapshot();
     });
 
     test('Первый тест.', () => {
