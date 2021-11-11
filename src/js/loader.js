@@ -1,10 +1,13 @@
 /* eslint-disable import/prefer-default-export */
-const loader = document.querySelector('#loader');
 
-export const showLoader = () => {
-    loader.style.display = 'block';
+export const showLoader = (data) => {
+    data = document.querySelector('#loader');
+
+    data.style.display = 'block';
 };
 
-export const hideLoader = () => {
-    loader.style.display = 'none';
+export const hideLoader = (data) => {
+    data = document.querySelector('#loader');
+
+    data.style.display = 'none';
 };

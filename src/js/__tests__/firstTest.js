@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { getItemsRequest } from '../requests';
+import { showLoader, hideLoader } from '../loader';
 
 jest.mock('axios');
 
@@ -29,9 +30,10 @@ describe('Группа тестов.', () => {
             <div id="error">
                 Error
             </div>
-            <button id="loader">
-                Loader
+            <button>
+                Button
             </button>
+            <p id="loader"></p>
         </div>
         `;
     });
@@ -45,6 +47,22 @@ describe('Группа тестов.', () => {
         const app = document.querySelector('#app').style.display;
 
         expect(app).toMatchSnapshot();
+    });
+
+    test('Проверка на присутствие loader', () => {
+        const loader = document.querySelector('#loader');
+
+        showLoader(loader);
+
+        expect(getComputedStyle(loader).display).toEqual('block');
+    });
+
+    test('Проверка на отсутствие loader', () => {
+        const loader = document.querySelector('#loader');
+
+        hideLoader(loader);
+
+        expect(getComputedStyle(loader).display).toEqual('none');
     });
 
     test('Первый тест.', () => {
