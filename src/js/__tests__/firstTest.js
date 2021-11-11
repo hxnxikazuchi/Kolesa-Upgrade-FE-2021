@@ -3,7 +3,6 @@ import { getItemsRequest } from '../requests';
 import { showLoader, hideLoader } from '../loader';
 
 jest.mock('axios');
-
 /**
  * Объект с успешно возвращёнными данными.
  * Отдельная константа, чтобы не повторять код в моке реализации и в проверке.
@@ -64,6 +63,16 @@ describe('Группа тестов.', () => {
 
         expect(getComputedStyle(loader).display).toEqual('none');
     });
+
+    // test('Проверка button', () => {
+    //     const button = jest.fn();
+
+    //     const allButtons  = document.querySelectorAll('button');
+
+    //     allButtons.forEach(() => {
+    //         expect(button).toHaveBeenCalled();
+    //     });
+    // });
 
     test('Первый тест.', () => {
         expect(2 + 2).toEqual(4);
